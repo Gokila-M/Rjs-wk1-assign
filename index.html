@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getWordCount() {
+        let text = "To be lonely is an easy thing, being alone is another  matter entirely. To understand this, first one must understand the difference  between loneliness and being alone. To be alone means that your are not in the  company of anyone else. You are one. But loneliness can happen anytime, anywhere. You can be lonely in a crowd, lonely with friends, lonely with family.  You can even be lonely while with loved ones. For feeling lonely, is in essence  a feeling of being alone. As thought you were one and you feel as though you  will always be that way. Loneliness can be one of the most destructive feelings  humans are capable of feeling. For loneliness can lead to depression, suicide,  and even to raging out and hurting friends and/or…show more content Generally almost all loneliness can be traced back to low  or below average self-esteem. Chronically lonely people will usually have low  opinions of themselves. They may think of themselves as unintelligent,  unattractive, broken, unwanted, not worthy of good things, no good, unable to do  anything right, and/or socially isolated. Unlike many other emotionally hurting  people, the chronically lonely usually know what is wrong, but like many others  they don't believe they can do anything to fix it, or, circling back to the low  self-esteem, they may also believe they are not worth of happiness. ";
+        text=text.replace(/[,.]/g,"");
+        text=text.toLocaleLowerCase();
+        const wordArray = text.split(" ");
+        console.log(wordArray.length)
+        const wordCount = {};
+         wordArray.forEach((item) => {
+         if (wordCount[item] == null) wordCount[item] = 1;
+          else {
+            wordCount[item] += 1;
+
+    }
+    
+  });
+  console.log(wordCount);
+}
+
+
+
+
+getWordCount();
+    </script>
+    
+</body>
+</html>
